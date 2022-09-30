@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "breakpoint";
+
+
+// === Variables ===
+// Color: Start
+$green: #0AB88A;
+$lightGreen: #0FF3B8;
+$white: #F5FFFC;
+$gray: #5B5B5B;
+$lightBrown: #B83209;
+$brown: #6B1900;
+// Color: End
+
+// Border: Start
+$borderStyle: 2px solid $lightGreen;
+$borderRight: 2px solid $lightGreen;
+$borderLeft: 2px solid $lightGreen;
+$borderTop: 2px solid $lightGreen;
+$borderBottom: 2px solid $lightGreen;
+// Border: End
+
+// Font Size: Start
+$fontSize12: 12px;
+$fontSize16: 16px;
+$fontSize20: 20px;
+$fontSize40: 40px;
+// Font Size: End
+
+// Weight: Start
+$fontWeight300: 300;
+$fontWeight400: 400;
+$fontWeight500: 500;
+$fontWeight600: 600;
+$fontWeight700: 700;
+// Weight: End
+
+// Transitions: Start
+$transition: all 0.8s ease;
+// Transitions: End
+// === Variables ===
+
+
+
+// All: Start
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.border-style {
+    border: $borderStyle;
+}
+
+body {
+    background-color: $white !important;
+}
+// All: End
+
+
+// Header: Start
+.header {
+    border: $borderStyle;
+    @include breakpoint-down(md) {
+        position: relative !important;
+    }
+
+    @include breakpoint-up(md) {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        width: 1366px;
+        background: $white;
+    }
+    .desktop-nav {  
+        .navigation {
+            display: flex;
+            @include breakpoint-down(md) {
+                display: none;
+            }
+            .nav-links-left, .nav-links-right  {
+                padding: 0;
+                .nav-item {
+                    .nav-link {
+                        color: $gray;
+                        padding: 16px 50px 16px 50px;
+                        &:hover {
+                            color: $lightGreen;
+                        }
+                    }
+        
+                    .nav-signup {
+                        color: $green;
+                    }
+                }
+            }
+
+            .img-company {
+                height: 70px;
+                border-left: $borderLeft;
+                border-right: $borderRight;
+            }
+        }
+    }
+    
+    .mobile-nav {
+        display: none;
+        @include breakpoint-down(md) {
+            display: block;
+        }
+        .nav {
+            position: relative;
+            z-index: 100;
+            .hamburger-button {
+                height: 22px;
+                border: none;
+                background: none;
+                span {
+                    transition: all 0.6s ease;
+                }
+                .top, .middle, .bottom {
+                    width: 28px;
+                    height: 4px;
+                    background-color: $green;
+                }
+                .top {
+                    transform-origin: 0 0;
+                }
+            }
+
+            .burger {
+                .top {
+                    transform-origin: 0 0;
+                    transform: rotate(45deg) translate(-0.5px, 0);
+                }
+                .middle {
+                    transform: scale(0);
+                }
+                .bottom {
+                    transform-origin: 0 100%;
+                    transform: rotate(-45deg) translate(-0.5px, 0);
+                }
+            }
+        }
+
+        .open {
+            transform: translateY(0) !important;
+        }
+
+        .links-mobile {
+            @include breakpoint-down(md) {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 623px;
+                position: absolute;
+                background-color: $white;
+                border: $borderStyle;
+                left: 0;
+                top: 0;
+                transform: translateY(-100%);
+                z-index: 50;
+                transition: all 0.8s ease-in-out;
+            }
+            @include breakpoint-up(md) {
+                display: none;
+            }
+            .nav-items-mobile {
+                .nav-item {
+                    margin: 30px 0;
+                    .nav-link {
+                        color: $gray;
+                        &:hover {
+                            color: $lightGreen;
+                        }
+                    }
+                }
+                .nav-item:nth-child(4) {
+                    .nav-link {
+                        color: $green;
+                        &:hover {
+                            color: $lightGreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Header: End
+
+
+// Hero: Start
+.hero {
+    width: 100%;
+    height: 100vh;
+    border-left: $borderLeft;
+    border-right: $borderRight;
+    @include breakpoint-down(md) {
+        width: 100%;
+        height: 768px;
+        border-bottom: $borderBottom;
+    }
+    .bg-hero {
+        background: $green;
+        top: 0;
+        left: -11.6px;
+        width: 37%;
+        height: 100vh;
+        z-index: -20;
+        position: absolute;
+        border: $borderStyle;
+        @include breakpoint-down(md) {
+            width: 100%;
+            height: 409px;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+    }
+    .text-hero {
+        position: relative;
+        top: 95px;
+        @include breakpoint-down(md) {
+            margin: 0 auto;
+        }
+        // Left Side: Start
+        .left-side {
+            width: 240px;
+            @include breakpoint-down(md) {
+                text-align: center;   
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+            .hero-title {
+                font-size: $fontSize40;
+                font-weight: $fontWeight600;
+                color: $white;
+                @include breakpoint-down(md) {
+                    margin-bottom: 40px;
+                }
+            }
+            .hero-subtitle {
+                font-size: $fontSize20;
+                font-weight: $fontWeight400;
+                color: $white;
+                @include breakpoint-down(md) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        // Left Side: End
+
+        // Img Hero: Start
+        .img-hero {
+            border: $borderStyle;
+            @include breakpoint-down(md) {
+                width: 280px;
+                margin: 0 auto 80px auto;
+            }
+        }
+        // Img Hero: End
+
+        // Button CTA: Start
+        .btn-cta {
+            top: 95%;
+            left: 42%;
+            @include breakpoint-down(md) {
+                top: 68%;
+                left: 10%;
+            }
+            .btn-hero {
+                padding: 17px 26px 17px;
+                font-size: $fontSize16;
+                font-weight: $fontWeight500;
+                color: $white;
+                background-color: $green;
+                border: $borderStyle;
+                transition: $transition;
+                &:hover {
+                    background-color: $lightGreen;
+                }
+                @include breakpoint-down(md) {
+                    padding: 8px 10px 8px;
+                    width: 238px;
+                }
+            }
+        }
+        // Button CTA: End
+
+        // Right Side: Start
+        .right-side {
+            @include breakpoint-down(md) {
+                margin: 0 auto;
+            }
+            .hero-subtitle {
+                width: 220px;
+                text-align: end;
+                @include breakpoint-down(md) {
+                    text-align: center;
+                }
+            }
+        }
+        // Right Side: End
+    }
+}
+// Hero: End
+
+
+// Product: start
+.product {
+    @include breakpoint-down(md) {
+        position: relative;
+        border-top: none;
+    }
+    .img-product {
+        height: 768px;
+        border-right: $borderRight;
+        @include breakpoint-down(md) {
+            border-right: none;
+            height: 100%;
+        }
+        img {
+            @include breakpoint-down(md) {
+                width: 306px;
+                height: 306px;
+            }
+        }
+    }
+
+    .desc {
+        @include breakpoint-down(md) {
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .title-product {
+            margin-bottom: 20px;
+            color: $lightBrown;
+            @include breakpoint-down(md) {
+                margin: 0 auto 40px auto;
+            }
+        }
+        .desc-product {
+            margin-bottom: 50px;
+            color: $gray;
+            @include breakpoint-down(md) {
+                margin: 0 auto 40px auto;
+            }
+        }
+        .btn-cta {
+            @include breakpoint-down(md) {
+                margin: 0 auto 40px auto;
+            }
+            .btn-product {
+                padding: 17px 52px;
+                background-color: transparent;
+                border: 2px solid $lightBrown;
+                color: $lightBrown;
+                transition: $transition;
+                &:hover {
+                    background-color: $lightBrown;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// Product: End
+
+
+// Find Our Products: Start
+.find-our {
+    border-right: $borderRight;
+    border-left: $borderRight;
+    @include breakpoint-down(md) {
+        height: 1300px;
+    }
+    .title-find {
+        padding: 65px 40px 65px 0;
+        color: $green;
+        @include breakpoint-down(md) {
+            padding: 50px 10px;
+            margin: 0 auto;
+        }
+    }
+
+    .span {
+        height: 768px;
+        border-right: $borderRight;
+        @include breakpoint-down(md) {
+           display: none;
+        }
+    }
+
+    .card-products {
+        padding: 65px 0 0 60px;
+        @include breakpoint-down(md) {
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+        .carousel-wrapper {
+            max-width: 1000px;
+            @include breakpoint-down(md) {
+                max-width: 350px;
+            }
+            .carousel-item {
+                // display: flex;
+                margin-bottom: 40px;
+                border: none;
+                border-radius: 0;
+                img {
+                    width: 443px;
+                    @include breakpoint-down(md) {
+                        width: 350px;
+                    }
+                }
+                .desc-find {
+                    background: $lightBrown;
+                    height: 547px;
+                    padding: 130px 40px 130px;
+                    @include breakpoint-down(md) {
+                        text-align: center;
+                    }
+                    .title-desc-find {
+                        margin-bottom: 20px;
+                        color: $white;
+                    }
+                    .desc-find-our {
+                        margin-bottom: 50px;
+                        color: $white;
+                    }
+                    .btn-cta {
+                        .btn-find-our {
+                            padding: 17px 52px;
+                            background-color: $green;
+                            border: 2px solid $lightGreen;
+                            color: $white;
+                            transition: $transition;
+                            &:hover {
+                                background-color: $lightGreen;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .open-slide {
+                display: flex;
+            }
+        }
+    }
+
+    .control {
+        top: 85%;
+        left: 41%;
+        @include breakpoint-down(md) {
+            top: 89%;
+            left: 32%;
+        }
+        .prev, .next {
+            background-color: transparent;
+            border: 2px solid $green;
+        }
+        .prev {
+            margin-right: 20px;
+        }
+        .next {
+            margin-left: 20px;
+        }
+    }
+}
+// Find Our Products: End
+
+
+// About Us: Start
+.about-us {
+    padding: 100px 0 90px 0;
+    .about-logo {
+        img {
+            width: 567px;
+            @include breakpoint-down(md) {
+                width: 310px;
+            }
+        }
+    }
+
+    .about-desc {
+        padding: 40px 140px 89px 40px;
+        width: 567px;
+        @include breakpoint-down(md) {
+            padding: 40px 0;
+            width: 310px;
+            height: 380px;
+            text-align: center;
+        }
+        .title-about {
+            margin-bottom: 20px;
+        }
+        .desc-about-us {
+            padding: 0 10px;
+        }
+    }
+}
+// About Us: End
+
+
+// Teabags Company: Start
+.teabags-company {
+    overflow: hidden;
+    .teabags {
+        padding: 23px 20px 16px 20px;
+        border-right: $borderRight;
+        border-left: $borderLeft;
+        .title-teabags {
+            font-size: $fontSize16;
+            font-weight: $fontWeight500;
+            color: $gray;
+        }
+    }
+
+    .span {
+        width: 1366px;
+        border-top: $borderTop;
+    }
+
+    .images-company {
+        width: 1280px;
+        z-index: -10;
+        overflow: hidden;
+        .card {
+            padding: 35px 10px 35px;
+            border: none !important;
+            border-radius: 0 !important;
+        }
+    }
+}
+// Teabags Company: End
+
+
+// Footer: Start
+.footer {
+    border-top: $borderTop;
+    background-color: #D8FFF5;
+    overflow: hidden;
+    .footer-links {
+        width: 762px;
+        .links {
+            .nav-item {
+                .nav-link {
+                    padding: 20px 0 !important;
+                    font-size: $fontSize16;
+                    font-weight: $fontWeight500;
+                    color: $gray;
+                }
+            }
+        }
+
+        .link-signup {
+            .nav-item {
+                .nav-link {
+                    padding: 20px 0 !important;
+                    font-size: $fontSize16;
+                    font-weight: $fontWeight500;
+                    color: $gray;
+                }
+            }
+
+            .c-form {
+                padding: 20px 0 0 0;
+                .input-items {
+                    .fname, .lname {
+                        border: none !important;
+                        margin-bottom: 40px;
+                        border-bottom: 2px solid $gray !important;
+                        background-color: transparent !important;
+                        @include breakpoint-down(md) {
+                            text-align: center;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+
+                .btn-submit {
+                    padding: 5px 27px 5px;
+                    background-color: $green;
+                    color: $white;
+                    font-size: $fontSize12;
+                    font-weight: $fontWeight500;
+                    transition: $transition;
+                    &:hover {
+                        background-color: $lightGreen;
+                    }
+                }
+            }
+        }
+    }
+
+    .span {
+        width: 1366px;
+        border-top: $borderTop;
+    } 
+    
+    .social-media {
+        width: 90%;
+        padding: 30px 0 30px;
+    }
+}
+// Footer: End

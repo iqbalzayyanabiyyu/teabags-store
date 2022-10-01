@@ -500,7 +500,7 @@ body {
 .teabags-company .images-company {
   width: 110%;
   height: 350px;
-  z-index: 50;
+  z-index: -50;
   position: relative;
   top: 50%;
   left: 75%;
@@ -510,7 +510,7 @@ body {
 .teabags-company .images-company .inner-slider {
   width: 220%;
   position: absolute;
-  pointer-events: none;
+  touch-action: none;
   top: 0;
   left: 0;
 }

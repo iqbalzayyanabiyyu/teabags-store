@@ -61,21 +61,6 @@ let pressed = false;
 let startX;
 let x;
 
-sliderContainer.addEventListener("mousedown", function(e) {
-    pressed = true;
-    startX = e.offsetX - innerSlider.offsetLeft;
-    sliderContainer.style.cursor = "grabbing";
-});
-
-sliderContainer.addEventListener("mouseenter", function() {
-    sliderContainer.style.cursor = "grab";
-});
-
-sliderContainer.addEventListener("mouseup", function() {
-    sliderContainer.style.cursor = "grab";
-    pressed = false;
-});
-
 const checkBoundary = () => {
     let outer = sliderContainer.getBoundingClientRect();
     let inner = innerSlider.getBoundingClientRect();
@@ -89,7 +74,22 @@ const checkBoundary = () => {
     }
 };
 
-sliderContainer.addEventListener("mousemove", function(e) {
+const gestureDown = (e)=> {
+    pressed = true;
+    startX = e.offsetX - innerSlider.offsetLeft;
+    sliderContainer.style.cursor = "grabbing";
+}
+
+const gestureEnter = ()=> {
+    sliderContainer.style.cursor = "grab";
+}
+
+const gestureUp = ()=> {
+    sliderContainer.style.cursor = "grab";
+    pressed = false;
+}
+
+const gestureMove = (e)=> {
     if (!pressed) return;
     e.preventDefault();
 
@@ -97,5 +97,24 @@ sliderContainer.addEventListener("mousemove", function(e) {
 
     innerSlider.style.left = `${x - startX}px`;
     checkBoundary();
-});
+}
+
+if(window.PointerEvent) {
+    window.addEventListener("pointerdown",gestureDown);
+    window.addEventListener("pointerenter", gestureEnter);
+    window.addEventListener("pointerup", gestureUp);
+    window.addEventListener("pointermove", gestureMove);
+} else {
+    window.addEventListener("touchdown",gestureDown);
+    window.addEventListener("mouseenter", gestureEnter);
+    window.addEventListener("touchup", gestureUp);
+    window.addEventListener("touchmove", gestureMove);
+
+    window.addEventListener("mousedown",gestureDown);
+    window.addEventListener("mouseenter", gestureEnter);
+    window.addEventListener("mouseup", gestureUp);
+    window.addEventListener("mousemove", gestureMove);
+}
+
+
 // Slide: End

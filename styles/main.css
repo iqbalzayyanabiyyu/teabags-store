@@ -20,6 +20,8 @@ body {
 @media screen and (max-width: 768px) {
   .header {
     position: relative !important;
+    margin: 0;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -149,6 +151,8 @@ body {
     width: 100%;
     height: 768px;
     border-bottom: 2px solid #0FF3B8;
+    margin: 0;
+    padding: 0;
   }
 }
 .hero .bg-hero {
@@ -266,6 +270,8 @@ body {
   .product {
     position: relative;
     border-top: none;
+    margin: 0 0;
+    padding: 0 0;
   }
 }
 .product .img-product {
@@ -333,6 +339,8 @@ body {
 @media screen and (max-width: 768px) {
   .find-our {
     height: 1300px;
+    margin: 0;
+    padding: 0;
   }
 }
 .find-our .title-find {
@@ -468,6 +476,12 @@ body {
 
 .teabags-company {
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .teabags-company {
+    margin: 0;
+    padding: 0;
+  }
 }
 .teabags-company .teabags {
   padding: 23px 20px 16px 20px;

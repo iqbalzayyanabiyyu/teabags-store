@@ -498,11 +498,23 @@ body {
   border-top: 2px solid #0FF3B8;
 }
 .teabags-company .images-company {
-  width: 1280px;
-  z-index: -10;
+  width: 110%;
+  height: 350px;
+  z-index: 50;
+  position: relative;
+  top: 50%;
+  left: 75%;
+  transform: translate(-65%, 0);
   overflow: hidden;
 }
-.teabags-company .images-company .card {
+.teabags-company .images-company .inner-slider {
+  width: 220%;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.teabags-company .images-company .inner-slider .card {
   padding: 35px 10px 35px;
   border: none !important;
   border-radius: 0 !important;
@@ -534,6 +546,7 @@ body {
 .footer .footer-links .link-signup .c-form .input-items .fname, .footer .footer-links .link-signup .c-form .input-items .lname {
   border: none !important;
   margin-bottom: 40px;
+  margin-right: 20px;
   border-bottom: 2px solid #5B5B5B !important;
   background-color: transparent !important;
 }

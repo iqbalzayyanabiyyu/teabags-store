@@ -50,3 +50,52 @@ function changeSlide() {
     slides[index].classList.add("open-slide");
 }
 // Carousel: End
+
+
+
+// Slide: Start
+let sliderContainer = document.querySelector(".images-company");
+let innerSlider = document.querySelector(".inner-slider");
+
+let pressed = false;
+let startX;
+let x;
+
+sliderContainer.addEventListener("mousedown", function(e) {
+    pressed = true;
+    startX = e.offsetX - innerSlider.offsetLeft;
+    sliderContainer.style.cursor = "grabbing";
+});
+
+sliderContainer.addEventListener("mouseenter", function() {
+    sliderContainer.style.cursor = "grab";
+});
+
+sliderContainer.addEventListener("mouseup", function() {
+    sliderContainer.style.cursor = "grab";
+    pressed = false;
+});
+
+const checkBoundary = () => {
+    let outer = sliderContainer.getBoundingClientRect();
+    let inner = innerSlider.getBoundingClientRect();
+
+    if (parseInt(innerSlider.style.left) > 0) {
+        innerSlider.style.left = "0px";
+    }
+
+    if (inner.right < outer.right) {
+        innerSlider.style.left = `-${inner.width - outer.width}px`;
+    }
+};
+
+sliderContainer.addEventListener("mousemove", function(e) {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+
+    innerSlider.style.left = `${x - startX}px`;
+    checkBoundary();
+});
+// Slide: End

@@ -7,15 +7,15 @@
 }
 
 .border-style {
-  border: 2px solid #0FF3B8;
+  border: 2px solid #5B5B5B;
 }
 
 body {
-  background-color: #F5FFFC !important;
+  background-color: #FFE6D8 !important;
 }
 
 .header {
-  border: 2px solid #0FF3B8;
+  border: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -32,7 +32,7 @@ body {
     top: 0;
     z-index: 50;
     width: 1366px;
-    background: #F5FFFC;
+    background: #FFFFFF;
   }
 }
 .header .desktop-nav .navigation {
@@ -51,15 +51,15 @@ body {
   padding: 16px 50px 16px 50px;
 }
 .header .desktop-nav .navigation .nav-links-left .nav-item .nav-link:hover, .header .desktop-nav .navigation .nav-links-right .nav-item .nav-link:hover {
-  color: #0FF3B8;
+  color: #FA9055;
 }
 .header .desktop-nav .navigation .nav-links-left .nav-item .nav-signup, .header .desktop-nav .navigation .nav-links-right .nav-item .nav-signup {
-  color: #0AB88A;
+  color: #D45F48;
 }
 .header .desktop-nav .navigation .img-company {
   height: 70px;
-  border-left: 2px solid #0FF3B8;
-  border-right: 2px solid #0FF3B8;
+  border-left: 2px solid #5B5B5B;
+  border-right: 2px solid #5B5B5B;
 }
 .header .mobile-nav {
   display: none;
@@ -84,7 +84,7 @@ body {
 .header .mobile-nav .nav .hamburger-button .top, .header .mobile-nav .nav .hamburger-button .middle, .header .mobile-nav .nav .hamburger-button .bottom {
   width: 28px;
   height: 4px;
-  background-color: #0AB88A;
+  background-color: #D45F48;
 }
 .header .mobile-nav .nav .hamburger-button .top {
   transform-origin: 0 0;
@@ -110,8 +110,8 @@ body {
     width: 100%;
     height: 623px;
     position: absolute;
-    background-color: #F5FFFC;
-    border: 2px solid #0FF3B8;
+    background-color: #FFFFFF;
+    border: 2px solid #5B5B5B;
     left: 0;
     top: 0;
     transform: translateY(-100%);
@@ -131,39 +131,39 @@ body {
   color: #5B5B5B;
 }
 .header .mobile-nav .links-mobile .nav-items-mobile .nav-item .nav-link:hover {
-  color: #0FF3B8;
+  color: #FA9055;
 }
 .header .mobile-nav .links-mobile .nav-items-mobile .nav-item:nth-child(4) .nav-link {
-  color: #0AB88A;
+  color: #D45F48;
 }
 .header .mobile-nav .links-mobile .nav-items-mobile .nav-item:nth-child(4) .nav-link:hover {
-  color: #0FF3B8;
+  color: #FA9055;
 }
 
 .hero {
   width: 100%;
   height: 100vh;
-  border-left: 2px solid #0FF3B8;
-  border-right: 2px solid #0FF3B8;
+  border-left: 2px solid #5B5B5B;
+  border-right: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .hero {
     width: 100%;
     height: 768px;
-    border-bottom: 2px solid #0FF3B8;
+    border-bottom: 2px solid #5B5B5B;
     margin: 0;
     padding: 0;
   }
 }
 .hero .bg-hero {
-  background: #0AB88A;
+  background: #FA9055;
   top: 0;
   left: -11.6px;
   width: 37%;
   height: 100vh;
   z-index: -20;
   position: absolute;
-  border: 2px solid #0FF3B8;
+  border: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .hero .bg-hero {
@@ -197,7 +197,7 @@ body {
 .hero .text-hero .left-side .hero-title {
   font-size: 40px;
   font-weight: 600;
-  color: #F5FFFC;
+  color: #FFFFFF;
 }
 @media screen and (max-width: 768px) {
   .hero .text-hero .left-side .hero-title {
@@ -207,7 +207,7 @@ body {
 .hero .text-hero .left-side .hero-subtitle {
   font-size: 20px;
   font-weight: 400;
-  color: #F5FFFC;
+  color: #FFFFFF;
 }
 @media screen and (max-width: 768px) {
   .hero .text-hero .left-side .hero-subtitle {
@@ -215,7 +215,7 @@ body {
   }
 }
 .hero .text-hero .img-hero {
-  border: 2px solid #0FF3B8;
+  border: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .hero .text-hero .img-hero {
@@ -237,13 +237,13 @@ body {
   padding: 17px 26px 17px;
   font-size: 16px;
   font-weight: 500;
-  color: #F5FFFC;
-  background-color: #0AB88A;
-  border: 2px solid #0FF3B8;
+  color: #FFFFFF;
+  background-color: #D45F48;
+  border: 2px solid #5B5B5B;
   transition: all 0.8s ease;
 }
 .hero .text-hero .btn-cta .btn-hero:hover {
-  background-color: #0FF3B8;
+  background-color: #FA9055;
 }
 @media screen and (max-width: 768px) {
   .hero .text-hero .btn-cta .btn-hero {
@@ -276,7 +276,7 @@ body {
 }
 .product .img-product {
   height: 768px;
-  border-right: 2px solid #0FF3B8;
+  border-right: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .product .img-product {
@@ -299,7 +299,7 @@ body {
 }
 .product .desc .title-product {
   margin-bottom: 20px;
-  color: #B83209;
+  color: #FA9055;
 }
 @media screen and (max-width: 768px) {
   .product .desc .title-product {
@@ -322,19 +322,19 @@ body {
 }
 .product .desc .btn-cta .btn-product {
   padding: 17px 52px;
-  background-color: transparent;
-  border: 2px solid #B83209;
-  color: #B83209;
+  background-color: #D45F48;
+  border: 2px solid #5B5B5B;
+  color: #FFFFFF;
   transition: all 0.8s ease;
 }
 .product .desc .btn-cta .btn-product:hover {
-  background-color: #B83209;
-  color: #F5FFFC;
+  background-color: #FA9055;
+  color: #FFFFFF;
 }
 
 .find-our {
-  border-right: 2px solid #0FF3B8;
-  border-left: 2px solid #0FF3B8;
+  border-right: 2px solid #5B5B5B;
+  border-left: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .find-our {
@@ -345,7 +345,7 @@ body {
 }
 .find-our .title-find {
   padding: 65px 40px 65px 0;
-  color: #0AB88A;
+  color: #D45F48;
 }
 @media screen and (max-width: 768px) {
   .find-our .title-find {
@@ -355,7 +355,7 @@ body {
 }
 .find-our .span {
   height: 768px;
-  border-right: 2px solid #0FF3B8;
+  border-right: 2px solid #5B5B5B;
 }
 @media screen and (max-width: 768px) {
   .find-our .span {
@@ -393,7 +393,7 @@ body {
   }
 }
 .find-our .card-products .carousel-wrapper .carousel-item .desc-find {
-  background: #B83209;
+  background: #D45F48;
   height: 547px;
   padding: 130px 40px 130px;
 }
@@ -404,21 +404,22 @@ body {
 }
 .find-our .card-products .carousel-wrapper .carousel-item .desc-find .title-desc-find {
   margin-bottom: 20px;
-  color: #F5FFFC;
+  color: #FFFFFF;
 }
 .find-our .card-products .carousel-wrapper .carousel-item .desc-find .desc-find-our {
   margin-bottom: 50px;
-  color: #F5FFFC;
+  color: #FFFFFF;
 }
 .find-our .card-products .carousel-wrapper .carousel-item .desc-find .btn-cta .btn-find-our {
   padding: 17px 52px;
-  background-color: #0AB88A;
-  border: 2px solid #0FF3B8;
-  color: #F5FFFC;
+  background-color: #FFFFFF;
+  border: 2px solid #5B5B5B;
+  color: #FA9055;
   transition: all 0.8s ease;
 }
 .find-our .card-products .carousel-wrapper .carousel-item .desc-find .btn-cta .btn-find-our:hover {
-  background-color: #0FF3B8;
+  color: #FFFFFF;
+  background-color: #FA9055;
 }
 .find-our .card-products .carousel-wrapper .open-slide {
   display: flex;
@@ -435,7 +436,7 @@ body {
 }
 .find-our .control .prev, .find-our .control .next {
   background-color: transparent;
-  border: 2px solid #0AB88A;
+  border: 2px solid #5B5B5B;
 }
 .find-our .control .prev {
   margin-right: 20px;
@@ -485,8 +486,8 @@ body {
 }
 .teabags-company .teabags {
   padding: 23px 20px 16px 20px;
-  border-right: 2px solid #0FF3B8;
-  border-left: 2px solid #0FF3B8;
+  border-right: 2px solid #5B5B5B;
+  border-left: 2px solid #5B5B5B;
 }
 .teabags-company .teabags .title-teabags {
   font-size: 16px;
@@ -495,7 +496,7 @@ body {
 }
 .teabags-company .span {
   width: 1366px;
-  border-top: 2px solid #0FF3B8;
+  border-top: 2px solid #5B5B5B;
 }
 .teabags-company .images-company {
   width: 110%;
@@ -510,19 +511,25 @@ body {
 .teabags-company .images-company .inner-slider {
   width: 220%;
   position: absolute;
+  pointer-events: none;
   touch-action: none;
   top: 0;
   left: 0;
 }
 .teabags-company .images-company .inner-slider .card {
+  background: #FFE6D8;
   padding: 35px 10px 35px;
   border: none !important;
   border-radius: 0 !important;
 }
+.teabags-company .images-company .inner-slider .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .footer {
-  border-top: 2px solid #0FF3B8;
-  background-color: #D8FFF5;
+  border-top: 2px solid #5B5B5B;
+  background-color: #FFC2A0;
   overflow: hidden;
 }
 .footer .footer-links {
@@ -558,18 +565,18 @@ body {
 }
 .footer .footer-links .link-signup .c-form .btn-submit {
   padding: 5px 27px 5px;
-  background-color: #0AB88A;
-  color: #F5FFFC;
+  background-color: #D45F48;
+  color: #FFFFFF;
   font-size: 12px;
   font-weight: 500;
   transition: all 0.8s ease;
 }
 .footer .footer-links .link-signup .c-form .btn-submit:hover {
-  background-color: #0FF3B8;
+  background-color: #FA9055;
 }
 .footer .span {
   width: 1366px;
-  border-top: 2px solid #0FF3B8;
+  border-top: 2px solid #5B5B5B;
 }
 .footer .social-media {
   width: 90%;

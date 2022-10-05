@@ -21,18 +21,18 @@ $borderBottom: 2px solid $color2;
 // Border: End
 
 // Font Size: Start
-$fontSize12: 12px;
-$fontSize16: 16px;
-$fontSize20: 20px;
-$fontSize40: 40px;
+$fontSize1: 12px;
+$fontSize2: 16px;
+$fontSize3: 20px;
+$fontSize4: 40px;
 // Font Size: End
 
 // Weight: Start
-$fontWeight300: 300;
-$fontWeight400: 400;
-$fontWeight500: 500;
-$fontWeight600: 600;
-$fontWeight700: 700;
+$fontWeight1: 300;
+$fontWeight2: 400;
+$fontWeight3: 500;
+$fontWeight4: 600;
+$fontWeight5: 700;
 // Weight: End
 
 // Transitions: Start
@@ -207,6 +207,9 @@ body {
         border-bottom: $borderBottom;
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
     }
     .bg-hero {
         background: $color4;
@@ -216,13 +219,14 @@ body {
         height: 100vh;
         z-index: -20;
         position: absolute;
-        border: $borderStyle;
+        border-right: $borderRight;
         @include breakpoint-down(md) {
             width: 100%;
             height: 409px;
             top: 0;
             left: 0;
-            border: none;
+            border-right: none;
+            border-bottom: $borderBottom;
         }
     }
     .text-hero {
@@ -241,16 +245,16 @@ body {
                 margin: 0 auto;
             }
             .hero-title {
-                font-size: $fontSize40;
-                font-weight: $fontWeight600;
+                font-size: $fontSize4;
+                font-weight: $fontWeight4;
                 color: $color1;
                 @include breakpoint-down(md) {
                     margin-bottom: 40px;
                 }
             }
             .hero-subtitle {
-                font-size: $fontSize20;
-                font-weight: $fontWeight400;
+                font-size: $fontSize3;
+                font-weight: $fontWeight2;
                 color: $color1;
                 @include breakpoint-down(md) {
                     margin-bottom: 40px;
@@ -262,6 +266,8 @@ body {
         // Img Hero: Start
         .img-hero {
             border: $borderStyle;
+            object-fit: cover;
+            width: 696px;
             @include breakpoint-down(md) {
                 width: 280px;
                 margin: 0 auto 80px auto;
@@ -275,12 +281,12 @@ body {
             left: 42%;
             @include breakpoint-down(md) {
                 top: 68%;
-                left: 10%;
+                left: 7.5%;
             }
             .btn-hero {
                 padding: 17px 26px 17px;
-                font-size: $fontSize16;
-                font-weight: $fontWeight500;
+                font-size: $fontSize2;
+                font-weight: $fontWeight3;
                 color: $color1;
                 background-color: $color5;
                 border: $borderStyle;
@@ -331,6 +337,8 @@ body {
             height: 100%;
         }
         img {
+            object-fit: cover;
+            border: $borderStyle;
             @include breakpoint-down(md) {
                 width: 306px;
                 height: 306px;
@@ -347,6 +355,8 @@ body {
         .title-product {
             margin-bottom: 20px;
             color: $color4;
+            font-size: $fontSize4;
+            font-weight: $fontWeight3;
             @include breakpoint-down(md) {
                 margin: 0 auto 40px auto;
             }
@@ -354,6 +364,8 @@ body {
         .desc-product {
             margin-bottom: 50px;
             color: $color2;
+            font-size: $fontSize3;
+            font-weight: $fontWeight2;
             @include breakpoint-down(md) {
                 margin: 0 auto 40px auto;
             }
@@ -414,7 +426,7 @@ body {
         .carousel-wrapper {
             max-width: 1000px;
             @include breakpoint-down(md) {
-                max-width: 350px;
+                // max-width: 30px;
             }
             .carousel-item {
                 // display: flex;
@@ -423,8 +435,9 @@ body {
                 border-radius: 0;
                 img {
                     width: 443px;
+                    object-fit: cover;
                     @include breakpoint-down(md) {
-                        width: 350px;
+                        width: 100%;
                     }
                 }
                 .desc-find {
@@ -437,10 +450,14 @@ body {
                     .title-desc-find {
                         margin-bottom: 20px;
                         color: $color1;
+                        font-size: $fontSize4;
+                        font-weight: $fontWeight3;
                     }
                     .desc-find-our {
                         margin-bottom: 50px;
                         color: $color1;
+                        font-size: $fontSize3;
+                        font-weight: $fontWeight2;
                     }
                     .btn-cta {
                         .btn-find-our {
@@ -508,10 +525,15 @@ body {
             text-align: center;
         }
         .title-about {
+            color: $color4;
             margin-bottom: 20px;
+            font-size: $fontSize4;
+            font-weight: $fontWeight3;
         }
         .desc-about-us {
             padding: 0 10px;
+            font-size: $fontSize3;
+            font-weight: $fontWeight2;
         }
     }
 }
@@ -531,8 +553,8 @@ body {
         border-right: $borderRight;
         border-left: $borderLeft;
         .title-teabags {
-            font-size: $fontSize16;
-            font-weight: $fontWeight500;
+            font-size: $fontSize2;
+            font-weight: $fontWeight3;
             color: $color2;
         }
     }
@@ -551,6 +573,10 @@ body {
         left: 75%;
         transform: translate(-65%, 0);
         overflow: hidden;
+        @include breakpoint-down(md) {
+            width: 150%;
+            left: 95%;
+        }
         .inner-slider {
             width: 220%;
             position: absolute; 
@@ -558,6 +584,9 @@ body {
             touch-action: none;
             top: 0;
             left: 0;
+            @include breakpoint-down(md) {
+                width: 680%;
+            }
             .card {
                 background: $color3;
                 padding: 35px 10px 35px;
@@ -584,8 +613,8 @@ body {
             .nav-item {
                 .nav-link {
                     padding: 20px 0 !important;
-                    font-size: $fontSize16;
-                    font-weight: $fontWeight500;
+                    font-size: $fontSize2;
+                    font-weight: $fontWeight3;
                     color: $color2;
                 }
             }
@@ -595,8 +624,8 @@ body {
             .nav-item {
                 .nav-link {
                     padding: 20px 0 !important;
-                    font-size: $fontSize16;
-                    font-weight: $fontWeight500;
+                    font-size: $fontSize2;
+                    font-weight: $fontWeight3;
                     color: $color2;
                 }
             }
@@ -613,6 +642,7 @@ body {
                         @include breakpoint-down(md) {
                             text-align: center;
                             padding-bottom: 20px;
+                            margin: 20px 0;
                         }
                     }
                 }
@@ -621,11 +651,14 @@ body {
                     padding: 5px 27px 5px;
                     background-color: $color5;
                     color: $color1;
-                    font-size: $fontSize12;
-                    font-weight: $fontWeight500;
+                    font-size: $fontSize1;
+                    font-weight: $fontWeight3;
                     transition: $transition;
                     &:hover {
                         background-color: $color4;
+                    }
+                    @include breakpoint-down(md) {
+                        margin-top: 20px;
                     }
                 }
             }
